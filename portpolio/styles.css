@@ -1,0 +1,491 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('bgp5.jpg'); /* Replace with your image path */
+    background-size: cover; /* This makes sure the image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 400px; /* Adjust the height as needed */
+    text-align: center; /* Centers the text horizontally */
+    color: #fff;
+    padding: 80px 0;
+}
+
+.btnp{
+    background-color: #0188ff; /* Green */
+    border: none;
+    border-radius: 22px;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.btnp:hover {
+    background-color: #0069e1;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+}
+.hero h2 {
+    font-size: 3.0rem;
+}
+.hero p {
+    font-size: 1.5rem;
+}
+
+.hero .btn {
+    margin-top: 20px;
+}
+
+/* contact section */
+
+.contact-section {
+    margin: 20px 0;
+  }
+
+  .contacts-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .contact-item {
+    margin: 15px;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .contact-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .icon-box {
+    font-size: 24px;
+    color: goldenrod;
+    margin-right: 15px;
+  }
+
+  .contact-title {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .contact-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+
+
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    list-style: none;
+  }
+
+  .social-item .social-link {
+    color: #ffffff;
+    font-size: 25px;
+  }
+
+
+  .social-item .social-link:hover { color: #ffffff; }
+
+
+/* About Section */
+
+
+/* About Section */
+.about-section {
+    padding: 50px 0;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #ffc107; /* Circular frame with yellow border */
+    object-fit: cover;
+    margin-top: 20px;
+  }
+
+  /* Service List */
+  .service-title {
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 35px;
+  }
+
+  .service-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    padding-bottom:0;
+    border-radius: 8px;
+    width: 380px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .service-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .service-icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  .service-item-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+
+  .service-item-text {
+    font-size: 1rem;
+  }
+
+
+
+
+/* Skills Section */
+.skills-section {
+    margin: 20px 0;
+  }
+
+  .skills-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .skill-item {
+    margin: 15px;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .skill-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .icon-box {
+    font-size: 24px;
+    color: goldenrod;
+    margin-right: 15px;
+  }
+
+  .skill-title {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .skill-level {
+    color: #6c757d;
+    margin: 0;
+  }
+
+
+
+/* Projects Section */
+
+
+/* Project Section Styling */
+#projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#projects h1 {
+    margin-bottom: 40px;
+}
+
+/* Card Styling */
+.project-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.project-card .btn {
+    border: 1px solid goldenrod;
+    color: goldenrod;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card .btn:hover {
+    border: none;
+    background-color: goldenrod;
+    color: white;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* resume */
+
+/* Resume Section Styling */
+.resume {
+    padding: 60px 0;
+}
+
+
+
+.resume p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Resume Button Styling */
+.resume-btn {
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Hover Effect for Resume Button */
+.resume-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+    border-color: #0056b3;
+}
+
+/* Contact Me Section Styling */
+.contact {
+  padding: 60px 0;
+
+}
+
+.conbox{
+  border-radius: 8px;
+  padding: 25px;
+  width: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact h1 {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+.contact .form-control {
+  border-radius: 30px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.contact .contact-btn {
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact .contact-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.contact .contact-btn i {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Scroll Up Button Styling */
+/* Scroll Up Button Styling */
+.scroll-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid goldenrod;
+  color: goldenrod;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  display: none; /* Initially hidden */
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-up:hover {
+  background-color: goldenrod;
+  transform: translateY(-5px);
+  color: white;
+
+}
+
+.scroll-up i {
+  line-height: 50px; /* Vertically center the icon */
+  font-size: 1.5rem;
+}
+
+
+/* Custom styles for mobile view */
+@media (max-width: 767.98px) {
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .contacts-list {
+        flex-direction: column;
+
+      }
+
+    .contact-item {
+    width:auto;
+    }
+      /* responsive about section */
+
+    .about-section .row {
+        text-align: center;
+      }
+
+    .profile-img {
+    margin-bottom: 20px;
+    }
+
+
+    .service-list {
+    padding-left: 0;
+    align-items: center;
+    }
+
+    .service-item {
+    justify-content: center;
+    text-align: left;
+    width: auto;
+    }
+
+    /* skill */
+    .skills-list {
+      justify-content: center;
+    }
+    /* project */
+    .project-card {
+        margin-bottom: 20px;
+    }
+
+    #projects h1 {
+        font-size: 2rem;
+    }
+    /* contact me */
+   .contact h2 {
+      font-size: 2rem;
+  }
+
+  .contact p {
+      font-size: 1rem;
+  }
+}
