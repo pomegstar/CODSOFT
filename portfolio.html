@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of MD. Nazmul Islam">
+    <title>Portfolio of MD. Nazmul Islam</title>
+    <link rel="shortcut icon" href="coding-icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btnp = document.querySelector("#btnp");
+
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      themeToggleBtn.innerHTML = newTheme === 'light' ? '<i class="bi bi-moon-fill"></i>' : '<i class="bi bi-sun-fill"></i>';
+    });
+            // Show/Hide Scroll-Up Button based on scrolling
+            window.onscroll = function () {
+                const scrollUpButton = document.getElementById("scrollUp");
+                
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollUpButton.style.display = "block";
+                } else {
+                    scrollUpButton.style.display = "none";
+                }
+            };
+
+            // Smooth scroll to the top when the button is clicked
+            document.getElementById("scrollUp").addEventListener("click", function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+
+            btnp.onclick = function() {
+                const contact = document.querySelector("#showContact");
+                if (contact.style.display === 'none' || contact.style.display === '') {
+                    contact.style.display = 'block';  // Show the element
+                    btnp.innerText = "Hide Contact";
+                } else {
+                    contact.style.display = 'none';   // Hide the element
+                    btnp.innerText = "Show Contact";
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <!-- Note:: Add 'sticky-top' after 'bg-dark' inside the class to make the navbar always visible -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><h1 class="h1"><img src="logo2.png" width="100px" height="40px"></h1></a>
+            
+            <button class="btn btn-outline-secondary" id="theme-toggle-btn"><i class="bi bi-moon-fill"></i></button>
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto mt-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" id="pro">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume">Resume</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Me</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Courses</a>
+                        </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="hero text-center">
+        <div class="container">
+            <h1>MD. Nazmul Islam</h1>
+            <p class="lead">Web Developer & AI Enthusiast</p>
+            <ul class="social-list">
+                <li class="social-item">
+                  <a href="https://facebook.com/Starpomeg" class="social-link">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+      
+                <li class="social-item">
+                  <a href="https://github.com/pomegstar" class="social-link">
+                    <i class="bi bi-github"></i>
+                  </a>
+                </li>
+      
+                <li class="social-item">
+                  <a href="https://www.linkedin.com/in/pomegstar" class="social-link">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </li>
+            </ul>
+            <button id="btnp" class="btnp">Show Contact</button>
+        </div>
+    </header>
+
+    <div class="contact-section" id="showContact" style="display: none;">
+        <ul  class="contacts-list d-flex flex-wrap justify-content-center">
+      
+          <li class="contact-item d-flex align-items-center">
+            <div class="icon-box">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:pomegstar@gmail.com" class="contact-link">pomegstar@gmail.com</a>
+            </div>
+          </li>
+      
+          <li class="contact-item d-flex align-items-center">
+            <div class="icon-box">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+8801915039392" class="contact-link">+8801915039392</a>
+            </div>
+          </li>
+      
+          <li class="contact-item d-flex align-items-center">
+            <div class="icon-box">
+              <i class="bi bi-calendar-event-fill"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="2002-10-19">October 19, 2002</time>
+            </div>
+          </li>
+      
+          <li class="contact-item d-flex align-items-center">
+            <div class="icon-box">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Dhaka, Bangladesh</address>
+            </div>
+          </li>
+      
+        </ul>
+      </div>
+      
+
+      <section id="about" class="about-section py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Profile Image Section -->
+            <div class="col-md-6 text-center order-1 order-md-2">
+              <img src="me2.png" alt="Your Profile Picture" class="profile-img rounded-circle">
+            </div>
+
+            <!-- About Text Section -->
+            <div class="col-md-6 order-2 order-md-1">
+              <h1>About Me</h1>
+              <p class="about-text">
+                Hi, I am Md. Nazmul Islam, a passionate web developer with a love for creating scalable web applications, 
+                automation tools, and extracting valuable insights from data.
+              </p>
+            </div>
+            
+          </div>
+      
+          <!-- "What I'm Doing" Subsection -->
+          <div class="row mt-5">
+            <h2 class="h2 service-title">What I'm Doing</h2>
+            <div class="col-md-6">
+              <ul class="service-list">
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <i class="bi bi-globe2" style="font-size: 40px; color: #ffc107;"></i>
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Web Applications</h4>
+                    <p class="service-item-text">
+                      Professional development of responsive and scalable web applications.
+                    </p>
+                  </div>
+                </li>
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <i class="bi bi-arrow-down-square" style="font-size: 40px; color: #ffc107;"></i>
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Web Scraping</h4>
+                    <p class="service-item-text">
+                      Extract data from websites efficiently for various use cases.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="col-md-6">
+              <ul class="service-list">
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <i class="bi bi-gear" style="font-size: 40px; color: #ffc107;"></i>
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">IT Automations</h4>
+                    <p class="service-item-text">
+                      Automate repetitive tasks and streamline workflows.
+                    </p>
+                  </div>
+                </li>
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <i class="bi bi-bar-chart" style="font-size: 40px; color: #ffc107;"></i>
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Data Analysis</h4>
+                    <p class="service-item-text">
+                      Analyzing data and providing insights to drive business decisions.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills py-5">
+        <div class="container">
+            <h1 class="text-center">Skills</h1>
+            <div class="skills-section" id="skills">
+                <ul class="skills-list d-flex flex-wrap justify-content-center">
+            
+                <li class="skill-item d-flex align-items-center">
+                    <div class="icon-box">
+                    <i class="bi bi-code-slash"></i>
+                    </div>
+                    <div class="skill-info">
+                    <p class="skill-title">Python</p>
+                    <p class="skill-level">Advanced</p>
+                    </div>
+                </li>
+
+                <li class="skill-item d-flex align-items-center">
+                    <div class="icon-box">
+                    <i class="bi bi-globe2"></i>
+                    </div>
+                    <div class="skill-info">
+                    <p class="skill-title">Django</p>
+                    <p class="skill-level">Advanced</p>
+                    </div>
+                </li> 
+                
+                <li class="skill-item d-flex align-items-center">
+                    <div class="icon-box">
+                      <i class="bi bi-diagram-3-fill"></i>
+                    </div>
+                    <div class="skill-info">
+                      <p class="skill-title">Flask</p>
+                      <p class="skill-level">Advanced</p>
+                    </div>
+                </li>
+                
+                <li class="skill-item d-flex align-items-center">
+                    <div class="icon-box">
+                      <i class="bi bi-database-fill"></i>
+                    </div>
+                    <div class="skill-info">
+                      <p class="skill-title">SQL</p>
+                      <p class="skill-level">Advanced</p>
+                    </div>
+                </li>
+            
+                <li class="skill-item d-flex align-items-center">
+                    <div class="icon-box">
+                    <i class="bi bi-terminal-fill"></i>
+                    </div>
+                    <div class="skill-info">
+                    <p class="skill-title">JavaScript</p>
+                    <p class="skill-level">Intermediate</p>
+                    </div>
+                </li>
+                         
+                <li class="skill-item d-flex align-items-center">
+                    <div class="icon-box">
+                    <i class="bi bi-bootstrap-fill"></i>
+                    </div>
+                    <div class="skill-info">
+                    <p class="skill-title">Bootstrap</p>
+                    <p class="skill-level">Intermediate</p>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects py-5">
+        <div class="container">
+            <h1 class="text-center">Projects</h1>
+            <div class="row mx-auto">
+                <div class="card mx-auto project-card" style="width: 18rem; text-align: center;">
+                    <div class="card-body">
+                <iframe class="card-img-top" src="https://www.youtube.com/embed/FUZf6e-wE1Q?si=plvnRfGbr7X7EFoe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4 class="card-title">Medibook</h4>
+                        <p class="card-text">Real-time hospital appointment system using Redis, Django Channels, and WebSocket for instant notifications.</p>
+                        <a href="https://github.com/pomegstar/Projects-of-CS50-Web/tree/main/Final%20Project/capstone" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+    
+                <div class="card mx-auto project-card" style="width: 18rem; text-align: center;">
+                    <div class="card-body">
+                <iframe class="card-img-top" src="https://www.youtube.com/embed/M38GECGi2BE?si=x4YFiKw7dqnaAJnl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4 class="card-title">FinAid</h4>
+                        <p class="card-text">A platform to manage installment-based payments for expensive products with real-time tracking of installments.</p>
+                        <a href="https://github.com/pomegstar/CS50X-Solved-Problems/tree/main/Final%20Project/finaid" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+    
+                <div class="card mx-auto project-card" style="width: 18rem; text-align: center;">
+                    <div class="card-body">
+                      <iframe class="card-img-top" src="https://www.youtube.com/embed/ROkRLjECqDY?si=vBfPFSdTN9jGaVjo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4 class="card-title">Network</h4>
+                        <p class="card-text">A social networking platform developed using Django, with user posts, likes, and follow features.</p>
+                        <a href="https://github.com/pomegstar/Projects-of-CS50-Web/tree/main/project%204/network" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="card mx-auto project-card" style="width: 18rem; text-align: center;">
+                  <div class="card-body">
+                    <iframe class="card-img-top" src="https://www.youtube.com/embed/S3TJUfObHwE?si=chwPgb0heVwMPggW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      <h4 class="card-title">Mail</h4>
+                      <p class="card-text">A single-page web application for sending and receiving emails, built with Django for the back end and JavaScript for the front end.</p>
+                      <a href="https://github.com/pomegstar/Projects-of-CS50-Web/tree/main/project%203/mail" class="btn btn-outline-primary">View Project</a>
+                  </div>
+              </div>
+
+              <div class="card mx-auto project-card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                  <iframe class="card-img-top" src="https://www.youtube.com/embed/Cqda-HP_lmo?si=Q-EsTsxJovqcbLJb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h4 class="card-title">Commerce</h4>
+                    <p class="card-text">An eBay-like auction site where users can create listings, place bids, leave comments, and add items to a watchlist.</p>
+                    <a href="https://github.com/pomegstar/Projects-of-CS50-Web/tree/main/project%202/commerce" class="btn btn-outline-primary">View Project</a>
+                </div>
+            </div>
+
+            <div class="card mx-auto project-card" style="width: 18rem; text-align: center;">
+              <div class="card-body">
+                <iframe class="card-img-top" src="https://www.youtube.com/embed/FAyeDQlsVzA?si=YXAJMhDll5C8crbV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h4 class="card-title">Wiki</h4>
+                  <p class="card-text">An encyclopedia-like Django app built based on the concept of the renowned virtual encyclopedia, Wikipedia.</p>
+                  <a href="https://github.com/pomegstar/Projects-of-CS50-Web/tree/main/project%201/wiki" class="btn btn-outline-primary">View Project</a>
+              </div>
+          </div>
+          
+                <div class="text-center mt-4">
+                    <a href="https://github.com/pomegstar?tab=repositories" class="btn btn-primary">See All Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resume Section -->
+    <section id="resume" class="resume py-5">
+        <div class="container text-center">
+            <h1 class="text-center">Resume</h1>
+            <ul  class="contacts-list d-flex flex-wrap justify-content-center">
+            <li class="contact-item d-flex align-items-center">
+              <div class="contact-info">
+                <p class="cp">See my resume and learn more about my experience and skills.</p>
+                <a href="https://docs.google.com/document/d/10Yz20ZHMErl6h04y3X-amXtAPWZK05yfAE2RLI7bTFY/edit?usp=sharing" download="Nazmul_Resume" ><button class="btn btn-primary resume-btn">See My Resume</button></a>
+              </div>
+            </li></uL>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact py-5">
+      <div class="container text-center">
+          <h1 class="text-center">Contact Me</h2>
+          <div class="conbox">
+          <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+          <div class="row justify-content-center">
+              <div class="col-md-6">
+                  <form action="https://formspree.io/f/mqazolna" method="POST">
+                      <div class="mb-3">
+                          <label for="name" class="form-label">Your Name</label>
+                          <input type="text" class="form-control" id="name" name="name" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Your Email</label>
+                          <input type="email" class="form-control" id="email" name="email" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="message" class="form-label">Message</label>
+                          <textarea class="form-control" id="message" rows="5" name="message" required></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary contact-btn">
+                          <i class="bi bi-send"></i> Send Message
+                      </button>
+                  </form>
+              </div>
+          </div>
+          </div>
+      </div>
+  </section>
+  <!-- Up Arrow Button -->
+<a href="#" id="scrollUp" class="scroll-up">
+  <i class="bi bi-arrow-up"></i>
+</a>
+
+    <!-- Footer -->
+    <footer class="py-3 text-center">
+        <p>© MD. Nazmul Islam 2024</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</body>
+</html>
+
